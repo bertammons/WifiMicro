@@ -153,9 +153,9 @@ void setup()
   //Interrupt Sensors 
   
   static st::IS_Contact             sensor3(F("contact1"), PIN_CONTACT_1, LOW, true);
-  static st::IS_Contact             sensor3(F("contact2"), PIN_CONTACT_1, LOW, true);
-  static st::IS_Button              sensor4(F("button1"), PIN_BUTTON_1, 1000, LOW, true, 500);
-  static st::IS_Button              sensor5(F("button2"), PIN_BUTTON_2, 1000, LOW, true, 500);
+  static st::IS_Contact             sensor4(F("contact2"), PIN_CONTACT_1, LOW, true);
+  static st::IS_Button              sensor5(F("button1"), PIN_BUTTON_1, 1000, LOW, true, 500);
+  static st::IS_Button              sensor6(F("button2"), PIN_BUTTON_2, 1000, LOW, true, 500);
   
   //Executors
   static st::EX_Alarm executor1(F("alarm1"), PIN_ALARM_1, LOW, true);
@@ -200,7 +200,8 @@ void setup()
   st::Everything::addSensor(&sensor3);
   st::Everything::addSensor(&sensor4); 
   st::Everything::addSensor(&sensor5); 
-      
+  st::Everything::addSensor(&sensor6); 
+    
   //*****************************************************************************
   //Add each executor to the "Everything" Class
   //*****************************************************************************
